@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psikolog Vasıf Öztürk</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-gradient-start: #e8f3ef;
+            --bg-gradient-end: #d6ede4;
+            --primary-color: #2b5343;
+            --secondary-color: #4a7c66;
+            --accent-color: #7fa895;
+            --text-dark: #2c3e35;
+            --text-light: #5f756a;
+            --white: #ffffff;
+            --card-bg: rgba(255, 255, 255, 0.85);
+            --whatsapp-color: #25D366;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+            color: var(--text-dark);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(232, 243, 239, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(74, 124, 102, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .nav-whatsapp {
+            background-color: var(--whatsapp-color);
+            color: white !important;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .nav-whatsapp:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-img-container {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(43, 83, 67, 0.18);
+            border: 6px solid var(--white);
+            position: relative;
+        }
+
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+        }
+
+        .hero-right h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-style: italic;
+            font-weight: 600;
+            color: var(--primary-color);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.9rem 2.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(43, 83, 67, 0.2);
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(43, 83, 67, 0.3);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp-color);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #20ba5a;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+        }
+
+        /* Sections General */
+        section {
+            padding: 6rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 600;
+        }
+
+        /* About Section */
+        .about-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(43, 83, 67, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .about-card p {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .about-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Services Grid & Books Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(43, 83, 67, 0.05);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(43, 83, 67, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.2rem;
+            background: rgba(74, 124, 102, 0.1);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+        }
+
+        .service-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Availability Section */
+        .availability-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(43, 83, 67, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .availability-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .schedule-item {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.2rem;
+            border-radius: 14px;
+            border-left: 4px solid var(--secondary-color);
+            box-shadow: 0 4px 10px rgba(43, 83, 67, 0.03);
+        }
+
+        .schedule-day {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .schedule-hours {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(43, 83, 67, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        .contact-info p {
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .contact-item i {
+            width: 45px;
+            height: 45px;
+            background: rgba(74, 124, 102, 0.1);
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-size: 1.1rem;
+        }
+
+        .contact-item i.fa-whatsapp {
+            background: rgba(37, 211, 102, 0.1);
+            color: var(--whatsapp-color);
+        }
+
+        .contact-item:hover {
+            color: var(--secondary-color);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            border: 1px solid rgba(74, 124, 102, 0.2);
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 12px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(74, 124, 102, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background-color: var(--whatsapp-color);
+            color: var(--white);
+            border: none;
+            padding: 1rem;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .submit-btn:hover {
+            background-color: #20ba5a;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(74, 124, 102, 0.1);
+            background: rgba(214, 237, 228, 0.4);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .hero-grid, .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .hero-right h1 {
+                font-size: 2.8rem;
+            }
+            .hero {
+                padding-top: 7rem;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo-text">Psikolog Vasıf Öztürk</a>
+            <ul class="nav-links">
+                <li><a href="#hakkimda">Hakkımda</a></li>
+                <li><a href="#uzmanlik">Uzmanlık</a></li>
+                <li><a href="#kitaplarim">Kitaplarım</a></li>
+                <li><a href="#musaitlik">Müsaitlik</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+                <li><a href="https://wa.me/905411617425?text=Merhaba%2C%20seanslar%20ve%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="nav-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding-top: 10rem;">
+        <div class="hero-grid">
+            <div class="hero-left">
+                <div class="profile-img-container">
+                    <img src="profil foto.jpeg" alt="Psikolog Vasıf Öztürk">
+                </div>
+            </div>
+            <div class="hero-right">
+                <h1>Psikolog Vasıf Öztürk</h1>
+                <!-- Unvan kaldırıldı, alan boş bırakıldı -->
+                <div class="hero-buttons">
+                    <a href="#iletisim" class="btn">Randevu Alın</a>
+                    <a href="https://wa.me/905411617425?text=Merhaba%2C%20seanslar%20ve%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp ile İletişim</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımda Bölümü -->
+    <section id="hakkimda">
+        <h2 class="section-title">Tanışma</h2>
+        <div class="about-card">
+            <p>Psikoloji ve Türk Dili ve Edebiyatı lisans eğitimlerimin ardından, Klinik Psikoloji alanındaki yüksek lisans eğitimimi sürdürmekteyim. Edebiyatın insan ruhuna ve anlatısına dair kazandırdığı derinliği, psikolojinin bilimsel yöntemleriyle birleştirerek her danışanın biricik yaşam öyküsüne özenle yaklaşıyorum.</p>
+            <p>Seans süreçlerimde bilimsel kanıtı olan yöntemleri ve mesleki etik ilkeleri esas alıyorum. Bilişsel Davranışçı Terapi (BDT) ve Kabul ve Kararlılık Terapisi (ACT) eğitimlerim ışığında; düşünce kalıplarınızı fark etmenize, zorlayıcı duygularla sağlıklı ilişkiler kurmanıza ve kendi değerleriniz doğrultusunda anlamlı bir yaşam inşa etmenize eşlik ediyorum.</p>
+        </div>
+    </section>
+
+    <!-- Uzmanlık Alanları -->
+    <section id="uzmanlik">
+        <h2 class="section-title">Uzman Olduğum Alanlar</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+                <h3>Bilişsel Davranışçı Terapi (BDT)</h3>
+                <p>Kaygı bozuklukları, depresyon ve olumsuz düşünce döngülerini kırmaya yönelik kanıta dayalı terapi süreci.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-seedling"></i></div>
+                <h3>Kabul ve Kararlılık Terapisi (ACT)</h3>
+                <p>Zorlayıcı duygulardan kaçınmak yerine, onları kabul edip kişinin değerleri doğrultusunda esnek ve anlamlı bir yaşam sürmesini sağlama yaklaşımı.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                <h3>Anlatı Odaklı Yaklaşımlar</h3>
+                <p>Yaşam öykünüzü yeniden yapılandırarak karşılaştığınız krizleri ve zorlukları anlamlandırma süreci.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                <h3>Destek Sunulan Diğer Alanlar</h3>
+                <p>Günlük yaşam stresi, tükenmişlik, özgüven problemleri ve ikili ilişki sorunları.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kitaplarım Bölümü -->
+    <section id="kitaplarim">
+        <h2 class="section-title">Kitaplarım</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-book"></i></div>
+                <h3>Aydınlığa Giden Karanlık</h3>
+                <p>Roman türündeki bu eserimde, insan ruhunun derinliklerini, karanlık ve aydınlık arasındaki mücadeleyi edebi bir dille işledim.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-feather"></i></div>
+                <h3>Vuslat-ı Vuskat</h3>
+                <p>Şiir koleksiyonum; kavuşmanın, hasretin ve duygu dünyamızın en saf hallerini dizelere döktüğüm özel bir eser.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-book-open"></i></div>
+                <h3>Gönülzâr</h3>
+                <p>Gönül bahçesinin izlerini taşıyan, şiir ve edebi hissiyatın harmanlandığı eserlerimden bir diğeri.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Müsaitlik Takvimi Bölümü -->
+    <section id="musaitlik">
+        <div class="availability-card">
+            <h3>Haftalık Müsaitlik ve Çalışma Saatleri</h3>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem;">Seans planlaması için müsaitlik takvimimi inceleyebilir, uygun olduğunuz zaman dilimini belirterek doğrudan WhatsApp üzerinden randevu talep edebilirsiniz.</p>
+            <div class="schedule-grid">
+                <div class="schedule-item">
+                    <div class="schedule-day">Pazartesi</div>
+                    <div class="schedule-hours">09:00 - 16:00</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-day">Salı</div>
+                    <div class="schedule-hours">09:00 - 21:00</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-day">Çarşamba</div>
+                    <div class="schedule-hours">09:00 - 16:00</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-day">Perşembe</div>
+                    <div class="schedule-hours">09:00 - 16:00</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-day">Cuma</div>
+                    <div class="schedule-hours">09:00 - 21:00</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-day">Cumartesi</div>
+                    <div class="schedule-hours">12:30 - 21:00</div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-day">Pazar</div>
+                    <div class="schedule-hours">09:00 - 21:00</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Bölümü -->
+    <section id="iletisim">
+        <h2 class="section-title">Randevu ve İletişim</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>Kendinizi keşfetme ve iyileşme yolculuğunuzda güvenli, gizlilik esaslı ve yargısız bir alanda buluşalım. Yüz yüze veya online seans imkanlarıyla ilgili bilgi almak, müsaitlik durumunuza göre randevu oluşturmak için doğrudan WhatsApp üzerinden iletişime geçebilirsiniz.</p>
+                <div class="contact-details">
+                    <a href="https://wa.me/905411617425?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" class="contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>+90 (541) 161 74 25 (WhatsApp)</span>
+                    </a>
+                    <a href="mailto:vasifozturk4912@gmail.com" class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>vasifozturk4912@gmail.com</span>
+                    </a>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Muş / Online Seanslar</span>
+                    </div>
+                </div>
+            </div>
+            <!-- WhatsApp Form Yönlendirme (Serbest Saat Seçimi) -->
+            <form class="contact-form" onsubmit="sendWhatsAppMessage(event)">
+                <div class="form-group">
+                    <input type="text" id="clientName" placeholder="Adınız Soyadınız" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="preferredTime" placeholder="Tercih Ettiğiniz Gün ve Saat (Örn: Salı 14:00)" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="clientMessage" placeholder="Mesajınız ve Randevu Talebiniz" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp ile Gönder & Randevu Al</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Psikolog Vasıf Öztürk. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <!-- WhatsApp Script -->
+    <script>
+        function sendWhatsAppMessage(event) {
+            event.preventDefault();
+            const name = document.getElementById('clientName').value;
+            const time = document.getElementById('preferredTime').value;
+            const message = document.getElementById('clientMessage').value;
+
+            const whatsappUrl = `https://wa.me/905411617425?text=${encodeURIComponent("Merhaba, adım " + name + ". Tercih ettiğim gün ve saat: " + time + ". Mesajım: " + message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
