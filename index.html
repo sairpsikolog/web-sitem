@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vasıf Öztürk | Klinik Psikolog</title>
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --accent: #16A085;
+            --bg: #F8F9FA;
+            --text: #333333;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('profil foto') no-repeat center center/cover;
+            color: var(--white);
+            padding: 160px 20px 100px;
+            text-align: center;
+        }
+
+        .hero img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--white);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            min-height: 24px; /* Boş bırakılan alanın yüksekliğini koruması için */
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .hours-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .hours-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .btn {
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #117a65;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Vasıf Öztürk</a>
+            <nav>
+                <a href="#hakkimda">Hakkımda</a>
+                <a href="#saatler">Çalışma Saatleri</a>
+                <a href="#randevu">Randevu & İletişim</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <img src="profil foto" alt="Vasıf Öztürk">
+        <h1>Vasıf Öztürk</h1>
+        <p></p>
+    </div>
+
+    <div class="container">
+        <section id="hakkimda">
+            <h2>Hakkımda</h2>
+            <p>Danışanlarına profesyonel bir bakış açısıyla eşlik eden, bilimsel ve etik ilkeler çerçevesinde psikolojik destek süreçlerini yürüten bir çalışma anlayışını benimsemekteyim. Bireylerin içsel potansiyellerini keşfetmelerine ve yaşam kalitelerini artırmalarına destek oluyorum.</p>
+        </section>
+
+        <section id="saatler">
+            <h2>Çalışma Saatleri</h2>
+            <ul class="hours-list">
+                <li><span>Pazartesi</span> <strong>09:00 - 16:00</strong></li>
+                <li><span>Salı</span> <strong>09:00 - 21:00</strong></li>
+                <li><span>Çarşamba</span> <strong>09:00 - 16:00</strong></li>
+                <li><span>Perşembe</span> <strong>09:00 - 16:00</strong></li>
+                <li><span>Cuma</span> <strong>09:00 - 21:00</strong></li>
+                <li><span>Cumartesi</span> <strong>12:30 - 21:00</strong></li>
+                <li><span>Pazar</span> <strong>09:00 - 21:00</strong></li>
+            </ul>
+        </section>
+
+        <section id="randevu">
+            <h2>Randevu & İletişim</h2>
+            <form onsubmit="event.preventDefault(); alert('Randevu talebiniz başarıyla alınmıştır.');">
+                <div class="form-group">
+                    <label for="name">Adınız Soyadınız</label>
+                    <input type="text" id="name" required placeholder="Adınızı giriniz">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta Adresiniz</label>
+                    <input type="email" id="email" required placeholder="E-posta adresinizi giriniz">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefon Numaranız</label>
+                    <input type="tel" id="phone" required placeholder="Telefon numaranızı giriniz">
+                </div>
+                <div class="form-group">
+                    <label for="date">Randevu Tarihi</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Randevu Saati</label>
+                    <input type="time" id="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesajınız / Notunuz (İsteğe Bağlı)</label>
+                    <textarea id="message" rows="4" placeholder="Belirtmek istediğiniz bir detay var mı?"></textarea>
+                </div>
+                <button type="submit" class="btn">Randevu Talebi Oluştur</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Vasıf Öztürk. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
